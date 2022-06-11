@@ -3,12 +3,14 @@ import exportAsImage from "./../utils/exportAsImage";
 
 
 export default class Question extends React.Component {
+
+
     render() {
         const question_div = React.createRef()
         return (
             <div>
                 <div ref={question_div} className="Question container py-3">
-                    <h3>{this.props.index}. {this.props.question}</h3>
+                    <h3 className="text-start">{this.props.index}. {this.props.question}</h3>
                     <div className="answers">
                         <div className="answer">
                             <input className="form-check-input" id={'q'+this.props.index+'a1'}
@@ -37,9 +39,13 @@ export default class Question extends React.Component {
                     </div>
                 </div>
                 <div className="container d-flex flex-row justify-content-center mb-3">
-                    <button className="btn btn-primary btn-sm"
+                    <button className="btn btn-primary btn-sm mx-1"
                     onClick={() => exportAsImage(question_div.current, 'TestQuestion'+this.props.index)}
                     >Export as image</button>
+                    <button className="btn btn-danger btn-sm mx-1"
+                    onClick={() => this.props.deleteQuestion(this.props.index)}
+                    >Delete</button>
+
                 </div>
                 <hr />
             </div>
