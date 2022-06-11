@@ -17,3 +17,7 @@ $ npm i
 $ npm start
 ```
 3. Go to 127.0.0.1:3000 and enjoy it
+
+## Todo
+- [ ] Add exam key
+- [ ] Uncheck button for questions
