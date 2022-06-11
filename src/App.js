@@ -10,14 +10,6 @@ class App extends React.Component {
     super(props);
     this.state = {
       questions: [
-        {
-          question: "Q",
-          answer1: "a1",
-          answer2: "a2",
-          answer3: "a3",
-          answer4: "a4",
-          correctAnswer: 3,
-        }
       ],
     };
   }
